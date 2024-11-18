@@ -1,0 +1,282 @@
+/* Existing CSS Adjustments */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #061218;
+  --yellow-color: #fbbc04;
+  --orange-color: #cf3e24;
+  --blue-color: #14a6e5;
+  --purple-color: #9470ff;
+  --purple-color-fill: #1b203a;
+  --orange-color-fill: #351b04;
+  --labels-primary-color: #fbfbfb;
+  --labels-secondary-color: #ebebf5;
+  --text-primary-font: "Montserrat", sans-serif;
+  --text-secondary-font: "Poppins", sans-serif;
+  --text-weight-black: 800;
+  --text-weight-heavy: 600;
+  --text-weight-medium: 500;
+  --text-weight-regular: 400;
+  --text-weight-light: 200;
+  --text-weight-extralight: 100;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--labels-primary-color);
+  font-family: var(--text-primary-font);
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+}
+
+p {
+  font-family: var(--text-secondary-font);
+  font-weight: var(--text-weight-light);
+  font-size: small;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1080px;
+  padding: 0 1rem;
+}
+
+.navbar {
+  background-color: var(--background-color);
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: var(--text-weight-heavy);
+  color: var(--labels-primary-color);
+}
+
+nav .menu {
+  display: flex;
+  list-style: none;
+}
+
+nav .menu li {
+  margin-left: 2rem;
+}
+
+nav .menu li a {
+  color: var(--labels-primary-color);
+  font-weight: var(--text-weight-medium);
+  text-decoration: none;
+}
+
+nav .menu li a:hover {
+  color: var(--yellow-color);
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+.content {
+  padding: 5rem;
+  background-color: var(--background-color);
+}
+
+.content-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.content-item .text {
+  width: 50%;
+}
+
+.content-item .text p {
+  padding: 25px 0px;
+}
+
+.content-item .image {
+  width: 40%;
+}
+
+.content-item img {
+  width: 100%;
+}
+
+h2 {
+  font-weight: var(--text-weight-medium);
+  font-size: 1.5rem;
+  align-items: center;
+}
+
+h3 {
+  font-weight: var(--text-weight-regular);
+  font-size: 1.4rem;
+  line-height: normal;
+  align-items: center;
+  padding-top: 5px;
+}
+
+footer {
+  background-color: var(--background-color);
+  color: var(--labels-primary-color);
+  text-align: center;
+  padding: 1rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+.highlight {
+  color: var(--yellow-color);
+}
+
+#content2 .text {
+  text-align: right;
+}
+
+.see-more-link {
+  color: var(--labels-primary-color);
+  font-weight: var(--text-weight-heavy);
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+#content2 h2 {
+  color: var(--purple-color);
+}
+
+#content3 .see-more-link,
+#content3 h2 {
+  color: var(--orange-color);
+}
+
+#content4 .see-more-link,
+#content4 h2 {
+  color: var(--blue-color);
+}
+
+#content3 .text,
+#content4 .text {
+  width: 100%;
+}
+
+.image-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.image-links a {
+  display: block;
+  width: 5%;
+}
+
+.image-links img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-links img:hover {
+  transform: scale(1.1);
+}
+
+#content5.content {
+  padding-top: 3rem;
+}
+
+#content5 {
+  background-color: var(--background-color);
+  color: var(--labels-primary-color);
+}
+
+.two-columns {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.image-column img {
+  width: 70px;
+  height: 70px;
+}
+
+.text-column {
+  flex: 1;
+}
+
+.text-column h3 {
+  font-family: var(--text-primary-font);
+  font-weight: var(--text-weight-medium);
+  font-size: 1.3rem;
+  color: var(--labels-secondary-color);
+}
+
+.tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background-color: var(--orange-color-fill);
+  color: var(--labels-secondary-color);
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 0.7em;
+  font-weight: var(--text-weight-regular);
+  margin: 0.5rem 0rem;
+}
+
+.portrait-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+.portrait-row img {
+  width: 114px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Positioning the arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2em;
+  color: var(--labels-secondary-color);
+  opacity: 0.5;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+/* Ensure the content is positioned relative to contain the arrows */
+#content5 {
+  position: relative;
+}
