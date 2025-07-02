@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Cores para o modo CLARO */
+  --background-light: #fafafa;
+  --text-light: #1b1b1e;
+
+  /* Cores para o modo ESCURO */
+  --background-dark: #1b1b1e;
+  --text-dark: #fafafa;
+
+  /* Cores para Links (vermelho) - Fixas para ambos os modos */
+  --link-color: #ff5055;
+  --link-hover-color: #961c20;
+
+  /* Cores atuais (dinâmicas, baseadas no modo) */
+  --current-bg-color: var(--background-light);
+  --current-text-color: var(--text-light);
+
+  /* Fontes */
+  --label-title-font: "TT Firs Neue", sans-serif;
+  --label-paragraph-font: "Courier New", Courier, monospace;
+
+  /* Pesos de fonte */
+  --text-weight-light: 300;
+  --text-weight-regular: 400;
+  --text-weight-bold: 700;
+}
+
+/* Modo ESCURO: Redefine as variáveis "current" */
+body.dark-mode {
+  --current-bg-color: var(--background-dark);
+  --current-text-color: var(--text-dark);
+}
+
+/* --- Estilos Globais do Body --- */
+body {
+  background-color: var(--current-bg-color);
+  color: var(--current-text-color);
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--label-title-font);
+  font-weight: var(--text-weight-bold);
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  color: var(--current-text-color);
+}
+
+/* --- Estilos para Parágrafos --- */
+p {
+  font-family: var(--label-paragraph-font);
+  font-weight: var(--text-weight-light);
+  font-size: small;
+  margin-bottom: 1em;
+  color: var(--current-text-color);
+}
+
+/* --- Estilos para o Footer --- */
+footer {
+  color: var(--current-text-color);
+  text-align: center;
+  padding: 1rem;
+}
+
+/* --- Estilos para Links --- */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+.highlight {
+  color: var(--link-color);
+}

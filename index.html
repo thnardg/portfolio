@@ -3,183 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/_fonts.css" />
+    <title id="pageTitle"></title>
   </head>
   <body>
     <div class="wrapper">
-      <div class="navbar">
-        <!-- Navigation Bar -->
-        <nav>
-          <h1 class="logo">thayná rodrigues</h1>
-          <ul class="menu">
-            <li><a href="#">about</a></li>
-            <li><a href="#">technologies</a></li>
-            <li><a href="#">apps</a></li>
-            <li><a href="#">websites</a></li>
-          </ul>
-        </nav>
+      <div>
+        <button onclick="setLanguage('en')">english</button>
+        <button onclick="setLanguage('pt')">português</button>
+        <button id="themeToggleButton"></button>
       </div>
+
+      <h1 id="name"></h1>
 
       <div class="content" id="content1">
-        <!-- Content Section 1 -->
         <div class="content-item">
           <div class="text">
-            <h2>hello, i’m <span class="highlight">thayná</span></h2>
-            <h3>software developer<br />code-driven, design-informed</h3>
-            <p>
-              I specialize in crafting well-structured, scalable software with a
-              focus on user-centric design. Every project I work on is an
-              opportunity to build something functional that users will love to
-              interact with.
-            </p>
-            <div class="image-links">
-              <a href="link1.html">
-                <img src="assets/in.png" alt="Image 1" />
-              </a>
-              <a href="link2.html">
-                <img src="assets/mail.png" alt="Image 2" />
-              </a>
-              <a href="link3.html">
-                <img src="assets/git.png" alt="Image 3" />
-              </a>
-              <a href="link4.html">
-                <img src="assets/cv.png" alt="Image 4" />
-              </a>
-            </div>
-          </div>
-          <div class="image">
-            <img src="assets/memoji.png" alt="Image 1" />
-          </div>
-        </div>
-      </div>
-
-      <div class="content" id="content2">
-        <!-- Content Section 2 -->
-        <div class="content-item reverse">
-          <div class="text">
-            <h2>technologies</h2>
-            <p>
-              I’m experienced in iOS development, building with Swift, SwiftUI,
-              and UIKit to deploy high-quality mobile applications. My work
-              includes using CoreData, Combine, HealthKit, AVFoundation,
-              CloudKit, XCTest, and many other frameworks to develop
-              feature-rich, high-performance apps.
-            </p>
-          </div>
-          <div class="image">
-            <img src="assets/tec.png" alt="Image 2" />
-          </div>
-        </div>
-      </div>
-
-      <!-- APPS CARROSSEL -->
-      <div class="content" id="content3">
-        <div class="content-item">
-          <div class="text">
-            <h2>apps</h2>
-            <p>
-              From initial idea to final release, each app is centered around
-              creating clear, maintainable code while keeping the user needs and
-              their best experience front and center.
-            </p>
-          </div>
-        </div>
-
-        <div class="content" id="content5">
-          <div class="arrow left-arrow">
-            <i class="fa fa-arrow-left"></i>
-          </div>
-
-          <div class="content-item two-columns">
-            <div class="image-column">
-              <img
-                src="assets/app-icon1.png"
-                alt="Icon Image"
-                width="70"
-                height="70" />
-            </div>
-            <div class="text-column">
-              <h3>be cool</h3>
-              <div class="tags-row">
-                <span class="tag">app</span>
-                <span class="tag">uikit</span>
-                <span class="tag">ios</span>
-                <span class="tag">ipados</span>
-              </div>
-              <p>
-                This is a description text that explains more about the section.
-                You can add as much text as needed here, and it will adapt to
-                the column layout.
-              </p>
-            </div>
-          </div>
-          <div class="portrait-row">
-            <img
-              src="assets/app-screen1.png"
-              alt="Portrait 1"
-              width="70"
-              height="90" />
-            <img
-              src="assets/app-screen2.png"
-              alt="Portrait 2"
-              width="70"
-              height="90" />
-            <img
-              src="assets/app-screen3.png"
-              alt="Portrait 3"
-              width="70"
-              height="90" />
-            <img
-              src="assets/app-screen4.png"
-              alt="Portrait 4"
-              width="70"
-              height="90" />
-          </div>
-          <div class="arrow right-arrow">
-            <i class="fa fa-arrow-right"></i>
-          </div>
-        </div>
-      </div>
-
-      <div class="content" id="content3">
-        <div class="content-item">
-          <div class="text">
-            <h2>apps</h2>
-            <p>
-              From initial idea to final release, each app is centered around
-              creating clear, maintainable code while keeping the user needs and
-              their best experience front and center.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="content" id="content4">
-        <div class="content-item">
-          <div class="text">
-            <h2>websites</h2>
-            <p>
-              I focus on building responsive, mobile-first websites that
-              prioritize both functionality and user experience, always
-              delivering sites that not only look great but also provide real
-              value to clients.
-            </p>
+            <h2>
+              <span id="helloMessage"></span>
+              <span class="highlight" id="highlightName"></span>
+            </h2>
+            <h3>
+              <span id="profession"></span> | <span id="workFields"></span>
+            </h3>
+            <p id="bio"></p>
           </div>
         </div>
       </div>
 
       <div class="footer">
         <footer>
-          <p>thayná rodrigues &copy; 2024</p>
+          <p><span id="footerText"></span> <span id="currentYear"></span></p>
         </footer>
       </div>
     </div>
+    <script src="js/localization.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
