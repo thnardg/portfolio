@@ -17,8 +17,11 @@ async function setLanguage(lang) {
     }
     document.title = translations.pageTitle || document.title;
 
-    // Armazenar a preferência do idioma no localStorage para lembrar da próxima vez
     localStorage.setItem("preferredLang", lang);
+
+    const toggleButton = document.getElementById("languageToggleButton");
+    toggleButton.textContent = lang === "en" ? "português" : "english";
+    toggleButton.setAttribute("data-lang", lang === "en" ? "pt" : "en");
   } catch (error) {
     console.error("Erro ao carregar tradução:", error);
     if (lang !== "en") {
@@ -30,9 +33,13 @@ async function setLanguage(lang) {
 document.addEventListener("DOMContentLoaded", () => {
   const savedLang = localStorage.getItem("preferredLang");
   const browserLang = navigator.language || navigator.userLanguage;
-  if (savedLang) {
-    setLanguage(savedLang);
-  } else {
-    setLanguage(browserLang.startsWith("pt") ? "pt" : "en");
-  }
+  const lang = savedLang || (browserLang.startsWith("pt") ? "pt" : "en");
+
+  setLanguage(lang);
+
+  const toggleButton = document.getElementById("languageToggleButton");
+  toggleButton.addEventListener("click", () => {
+    const nextLang = toggleButton.getAttribute("data-lang") || "en";
+    setLanguage(nextLang);
+  });
 });

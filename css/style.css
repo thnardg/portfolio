@@ -22,7 +22,7 @@
   --current-text-color: var(--text-light);
 
   /* Fontes */
-  --label-title-font: "TT Firs Neue", sans-serif;
+  --label-title-font: "TT Firs Neue Trial", sans-serif;
   --label-paragraph-font: "Courier New", Courier, monospace;
 
   /* Pesos de fonte */
@@ -95,4 +95,20 @@ a:hover {
 
 .highlight {
   color: var(--link-color);
+}
+
+button {
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: var(--text-weight-bold);
+  color: var(--link-color);
+  cursor: pointer;
+  padding: 0.5em 1em;
+  transition: color 0.2s ease;
+}
+
+button:hover {
+  color: var(--link-hover-color);
 }

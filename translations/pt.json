@@ -2,8 +2,8 @@
   "pageTitle": "thayná rodrigues | dev",
   "name": "Thayná Rodrigues",
   "profession": "Desenvolvedora de Software",
-  "work-fields": "web | mobile",
+  "workFields": "web | mobile",
   "bio": "Sou especializada em desenvolver software bem estruturado e escalável, com foco em design centrado no usuário. Cada projeto em que trabalho é uma oportunidade para construir algo funcional que os usuários vão adorar interagir.",
-  "mobile-description": "Tenho experiência em desenvolvimento iOS, construindo com Swift, SwiftUI e UIKit para implementar aplicativos móveis de alta qualidade.",
-  "website-description": "aaaaa"
+  "mobileDescription": "Tenho experiência em desenvolvimento iOS, construindo com Swift, SwiftUI e UIKit para implementar aplicativos móveis de alta qualidade.",
+  "websiteDescription": "aaaaa"
 }

@@ -16,7 +16,7 @@ function updateToggleButtonText(currentMode) {
   const themeToggleButton = document.getElementById("themeToggleButton");
   if (themeToggleButton) {
     themeToggleButton.textContent =
-      currentMode === "dark" ? "Light Mode" : "Dark Mode";
+      currentMode === "dark" ? "light mode" : "dark mode";
   }
 }
 
