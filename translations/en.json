@@ -3,7 +3,7 @@
   "name": "Thayná",
   "profession": "Software Developer",
   "workFields": "mobile | web",
-  "bio": "I specialize in crafting well-structured, scalable software with a focus on user-centric design. Every project I work on is an opportunity to build something functional that users will love to interact with. I specialize in crafting well-structured, scalable software with a focus on user-centric design. Every project I work on is an opportunity to build something functional that users will love to interact with.",
-  "mobileDescription": "I’m experienced in iOS development, building with Swift, SwiftUI, and UIKit to deploy high-quality mobile applications.",
-  "websiteDescription": "I have experience in web development, using technologies like HTML, CSS, and JavaScript to create responsive and functional interfaces."
+  "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut diam at elit luctus tincidunt. Integer nec turpis in tortor luctus tincidunt. Curabitur ac justo vel odio dignissim pharetra. Vivamus viverra, lacus ac posuere consequat, velit lectus tempor erat, at feugiat sapien risus vitae lacus. In hac habitasse platea dictumst. Proin elementum magna sed turpis pretium, vitae sodales justo fringilla. Fusce finibus, nulla at ultrices fermentum, turpis nulla dignissim orci, nec malesuada nunc est eget lorem. Aliquam erat volutpat. Ut ut eros at ipsum gravida facilisis. Quisque in libero ac lectus ultrices sollicitudin. Sed nec mauris ac orci pulvinar facilisis. Morbi ut metus nec nulla rhoncus cursus.",
+  "mobileDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  "websiteDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 }
