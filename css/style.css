@@ -1,114 +1,296 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
   /* Cores para o modo CLARO */
   --background-light: #fafafa;
-  --text-light: #1b1b1e;
+  --text-light: #191919;
 
   /* Cores para o modo ESCURO */
-  --background-dark: #1b1b1e;
+  --background-dark: #161414;
   --text-dark: #fafafa;
 
-  /* Cores para Links (vermelho) - Fixas para ambos os modos */
-  --link-color: #ff5055;
-  --link-hover-color: #961c20;
+  /* Cores para Links */
+  --link-color: #ff0008;
+  --link-hover-color: #ff0000;
 
-  /* Cores atuais (dinâmicas, baseadas no modo) */
+  /* Cores atuais (modo dinâmico) */
   --current-bg-color: var(--background-light);
   --current-text-color: var(--text-light);
 
   /* Fontes */
   --label-title-font: "TT Firs Neue Trial", sans-serif;
-  --label-paragraph-font: "Courier New", Courier, monospace;
+  --label-paragraph-font: "Source Code Pro", monospace;
 
   /* Pesos de fonte */
   --text-weight-light: 300;
-  --text-weight-regular: 400;
   --text-weight-bold: 700;
 }
 
-/* Modo ESCURO: Redefine as variáveis "current" */
+/* Modo ESCURO */
 body.dark-mode {
   --current-bg-color: var(--background-dark);
   --current-text-color: var(--text-dark);
+  --link-color: #2fff00;
+  --link-hover-color: #90ff42;
 }
 
-/* --- Estilos Globais do Body --- */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background-color: var(--current-bg-color);
   color: var(--current-text-color);
-  line-height: 1.5;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 0;
+}
+
+.page-content {
+  flex: 1;
+  padding: 2rem 6rem 0 6rem; /* Top, Right, Bottom, Left */
+}
+
+footer {
+  padding: 0;
+  text-align: center;
+  color: var(--current-text-color);
+}
+
+#scribble {
+  position: relative;
+  width: 200px;
+}
+
+.bio-container > div {
+  display: flex;
+  align-items: flex-end;
+}
+
+#name {
+  text-transform: lowercase;
+  font-weight: 300;
+  margin-top: 6rem;
+  font-size: 80px;
+  margin-right: -10px;
+}
+
+#scribble {
+  width: 200px;
+  margin-left: -50px;
+  margin-bottom: -5px; 
+}
+
+#name {
+  text-transform: lowercase;
+  font-weight: 300;
+  margin-top: 6rem;
+  font-size: 80px;
+  line-height: 1;
+}
+
+#profession {
+  text-transform: lowercase;
+  font-weight: 300;
+  margin: 0;
+  font-size: 1rem;
+}
+
+#workFields {
+  text-transform: lowercase;
+  margin: 0;
+}
+
+#bio {
+  margin: 75px 0 55px 0;
+    text-transform: lowercase;
+  max-width: 400px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.wrapper-right {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  min-height: 100vh;
-  margin: 0;
-  padding: 20px;
-  box-sizing: border-box;
-  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.cardImg {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+.contactInfo {
+  margin: 0.5rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.contact-container {
+  margin-top: auto;
+}
+
+#mobileDescription, #websiteDescription {
+  font-size: small;
+}
+
+/* Títulos */
+h1 {
   font-family: var(--label-title-font);
   font-weight: var(--text-weight-bold);
-  margin-top: 1em;
-  margin-bottom: 0.5em;
+  margin: 0;
   color: var(--current-text-color);
 }
 
-/* --- Estilos para Parágrafos --- */
+/* Parágrafos */
 p {
   font-family: var(--label-paragraph-font);
   font-weight: var(--text-weight-light);
-  font-size: small;
-  margin-bottom: 1em;
   color: var(--current-text-color);
 }
 
-/* --- Estilos para o Footer --- */
-footer {
-  color: var(--current-text-color);
-  text-align: center;
-  padding: 1rem;
-}
-
-/* --- Estilos para Links --- */
+/* Links */
 a {
   color: var(--link-color);
+  font-family: var(--label-paragraph-font);
+  font-weight: 400;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 a:hover {
   color: var(--link-hover-color);
+  text-decoration: underline;
 }
 
-.highlight {
-  color: var(--link-color);
-}
-
+/* Botões */
 button {
   background: none;
   border: none;
-  box-shadow: none;
-  font-family: "Courier New", Courier, monospace;
-  font-weight: var(--text-weight-bold);
+  font-family: var(--label-paragraph-font);
+  font-size: 1rem;
+  font-weight: 400;
   color: var(--link-color);
   cursor: pointer;
-  padding: 0.5em 1em;
+  padding: 0 1.5rem 0 0;
   transition: color 0.2s ease;
 }
 
 button:hover {
   color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+/* --- Card Styles --- */
+.mobileCard,
+.webCard {
+  border: 1px solid var(--current-text-color); 
+  padding: 1.5rem;      
+  margin: 1rem;          
+  text-align: center;    
+  width: 45%;        
+  box-sizing: border-box; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.mobileCard p,
+.webCard p {
+  margin: 0.5rem 0; 
+}
+
+.mobileCard span,
+.webCard span {
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem; 
+}
+
+
+.wrapper-right {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; 
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.mobileCard,
+.webCard {
+  border: 0.5px solid var(--current-text-color);
+  padding: 1.5rem;
+  margin: 1rem; 
+  text-align: center;
+  width: 45%;
+  height: 50%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- Media Queries (Important for Responsiveness!) --- */
+@media (max-width: 768px) {
+  .page-content {
+    padding: 1rem 2rem; 
+  }
+
+  .wrapper {
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .wrapper-left,
+  .wrapper-right {
+    width: 100%; 
+    align-items: center; 
+  }
+
+  .bio-container > div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #name {
+    font-size: 60px;
+    margin-top: 3rem;
+  }
+
+  #scribble {
+    width: 150px;
+    margin-left: 0; 
+    margin-bottom: 10px; 
+  }
+
+  .wrapper-right {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mobileCard,
+  .webCard {
+    width: 90%; 
+    margin: 0.5rem 0;
+  }
 }

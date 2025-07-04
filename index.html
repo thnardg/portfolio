@@ -8,36 +8,58 @@
     <title id="pageTitle"></title>
   </head>
   <body>
+  <div class="page-content">
     <div class="wrapper">
-      <div>
-        <button id="languageToggleButton"></button>
-        <button id="themeToggleButton"></button>
-      </div>
+      <div class="wrapper-left">
+        <div class="header">
+          <button id="languageToggleButton"></button>
+          <button id="themeToggleButton"></button>
+        </div>
 
-      <h1 id="name"></h1>
-
-      <div class="content" id="content1">
-        <div class="content-item">
-          <div class="text">
-            <h2>
-              <span id="helloMessage"></span>
-              <span class="highlight" id="highlightName"></span>
-            </h2>
-            <h3>
-              <span id="profession"></span> | <span id="workFields"></span>
-            </h3>
-            <p id="bio"></p>
+        <div class="bio-container">
+          <div>
+            <h1 id="name"></h1>
+          <img id="scribble" src="assets/img/2.png" alt="scribble">
           </div>
+          <p id="profession"></p>
+          <p id="workFields"></p>
+          <p id="bio"></p>
+        </div>
+
+        <div class="contact-container">
+          <a class="contactInfo" href="https://www.linkedin.com">linkedin</a>
+          <a class="contactInfo" href="https://www.instagram.com">instagram</a>
+          <a class="contactInfo" href="https://www.github.com">github</a>
+          <a class="contactInfo" href="https://www.gmail.com">gmail</a>
         </div>
       </div>
 
-      <div class="footer">
-        <footer>
-          <p><span id="footerText"></span> <span id="currentYear"></span></p>
-        </footer>
+      <div class="wrapper-right">
+        <div class="mobileCard">
+          <img class="cardImg" src="assets/img/mobile.png" alt="">
+          <p>mobile</p>
+          <p id="mobileDescription">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, non ipsa eos ipsum distinctio excepturi et consectetur optio expedita vel.</p>
+          <span><a href="#">Content </a><a href="#">Content </a><a href="#">Content</a></span>
+        </div>
+        <div class="webCard">
+          <img class="cardImg" src="assets/img/web.png" alt="">
+          <p>web</p>
+          <p id="websiteDescription">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, non ipsa eos ipsum distinctio excepturi et consectetur optio expedita vel.</p>
+          <span><a href="#">Content </a><a href="#">Content </a><a href="#">Content</a></span>
+        </div>
       </div>
     </div>
-    <script src="js/localization.js"></script>
-    <script src="js/script.js"></script>
-  </body>
+  </div>
+
+  <div class="footer">
+    <footer>
+      <p><span id="footerText"></span> <span id="currentYear"></span></p>
+    </footer>
+  </div>
+
+  <script src="js/localization.js"></script>
+  <script src="js/script.js"></script>
+</body>
 </html>
+
+
